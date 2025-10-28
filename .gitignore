@@ -1,0 +1,41 @@
+# Ignore environment files (store secrets, AWS keys, etc.)
+.env
+*.env
+
+# Terraform local state files
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# AWS credentials or config backups
+.aws/
+*.pem
+*.key
+*.crt
+
+# IDE and editor folders
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Python virtual environments (if used for scripts)
+venv/
+__pycache__/
+*.pyc
+
+# macOS system files
+.DS_Store
