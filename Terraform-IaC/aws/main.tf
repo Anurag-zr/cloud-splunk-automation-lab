@@ -11,3 +11,10 @@ module "cloudtrail" {
   source = "./modules/cloudtrail"
   cloudtrail_bucket_name = "cloudtrail-logs-${random_id.suffix.hex}"
 }
+
+
+module "guardDuty" {
+  count = var.enable_guardDuty?1:0
+  source = "./modules/guardDuty"  
+  guardDuty_s3_bucket_name = "guardDuty-logs-${random_id.suffix.hex}"
+}

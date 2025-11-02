@@ -4,3 +4,12 @@ variable "aws_region" {
     default     = "us-east-1"
   
 }
+
+
+#guardDuty enabled variable 
+
+variable "enable_guardDuty" {
+  description = "Enable or disable GuardDuty provisioning"
+  type        = bool
+  default     = false
+}
