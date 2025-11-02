@@ -26,5 +26,11 @@ terraform destroy
 ```bash
 terraform apply -target=module.guardDuty
 terraform destroy -target=module.cloudtrail
+```
 
+### Apply/plan specific module and passing variable value
+```bash
+terraform plan -var="enable_guardDuty=true" -target=module.guardDuty
+terraform apply -var="enable_guardDuty=true" -target=module.guardDuty
+```
 
