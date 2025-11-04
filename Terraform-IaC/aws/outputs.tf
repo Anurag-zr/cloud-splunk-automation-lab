@@ -19,3 +19,11 @@ output "guardduty_detector_id" {
   description = "ID of the GuardDuty detector"
   value       = length(module.guardDuty) > 0 ? module.guardDuty[0].guardduty_detector_id : null
 }
+
+output "centralized_logs_bucket_name" {
+  value = module.aws_centralized_logging.centralized_logs_bucket_name
+}
+
+output "centralized_logs_bucket_arn" {
+  value = module.aws_centralized_logging.centralized_logs_bucket_arn
+}
